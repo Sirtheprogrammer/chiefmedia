@@ -275,8 +275,9 @@ body {
   flex-direction: column;
   width: 100%;
   padding: 0;
-  margin-top: calc(var(--header-height) + 60px);
-  margin-bottom: 0;
+  /* smaller offset so carousel sits just under the search bar */
+  margin-top: calc(var(--header-height) + 8px);
+  margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -292,6 +293,11 @@ body {
     padding: 0 8px;
     box-sizing: border-box;
     width: 100%;
+  }
+
+  /* On small screens, let the mobile carousel provide vertical spacing; remove app-body extra top margin */
+  .app-body{
+    margin-top: 0;
   }
 
   .carousel{
